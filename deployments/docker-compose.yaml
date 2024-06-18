@@ -5,7 +5,7 @@ services:
   app:
     build:
       context: ..
-      dockerfile: ../docker/app/Dockerfile
+      dockerfile: ./docker/app/Dockerfile
     ports:
       - "8000:8000"
     volumes:
@@ -23,7 +23,7 @@ services:
   celery:
     build:
       context: ..
-      dockerfile: ../docker/celery/Dockerfile
+      dockerfile: ./docker/celery/Dockerfile
   db:
     image: ankane/pgvector
     restart: always
@@ -37,7 +37,7 @@ services:
 
   redis:
     image: "redis:latest"
-    container_name: "my-redis-container"
+    container_name: "redis-container"
     ports:
       - "6379:6379"
 
