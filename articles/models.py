@@ -7,6 +7,8 @@ class Article(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
     average_score = models.FloatField(default=0.0)
+    standard_deviation = models.FloatField(default=0.0)
+    number_of_ratings = models.IntegerField(default=0)
 
 
 class Rating(models.Model):
