@@ -5,7 +5,7 @@ services:
   app:
     build:
       context: ..
-      dockerfile: build/app/Dockerfile
+      dockerfile: ../docker/app/Dockerfile
     ports:
       - "8000:8000"
     volumes:
@@ -23,7 +23,7 @@ services:
   celery:
     build:
       context: ..
-      dockerfile: build/celery/Dockerfile
+      dockerfile: ../docker/celery/Dockerfile
   db:
     image: ankane/pgvector
     restart: always
